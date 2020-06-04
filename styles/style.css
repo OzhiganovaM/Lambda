@@ -1,0 +1,506 @@
+@font-face{
+font-family: GentiumBookBasic;
+src: url(../fonts/Gentium-Basic/GenBkBasB.ttf);
+font-weight: normal}
+@font-face{
+font-family: GentiumBookBasicBold;
+src: url(../fonts/Gentium-Basic/GenBkBasR.ttf);
+font-weight: bold;
+}
+@font-face{
+font-family: YesevaOne;
+src: url(../fonts/yeseva-one/YesevaOne-Regular_v2.otf);
+}
+@font-face{
+font-family: OpenSans;
+src: url(../fonts/open-sans/OpenSans-Italic.ttf);
+src: url(../fonts/open-sans/OpenSans-Regular.ttf);
+font-weight: normal;
+}
+@font-face{
+font-family: OpenSansBold;
+src: url(../fonts/open-sans/OpenSans-Bold.ttf);
+font-weight: bold;
+}
+@font-face{
+font-family: Lato;
+src: url(../fonts/lato/Lato-Regular.ttf);
+}
+main{
+min-height: calc(100vh - 320px);
+}
+.container{
+max-width: 1600px;
+margin: 0 auto;
+}
+.promo{
+min-height: 750px;
+background-image: url(../img/Bg-header.png);
+background-size: cover;
+}
+.promo_header{
+min-height: 159px;
+display: flex;
+justify-content:space-evenly;
+align-items:center;
+}
+.promo-header__logo{
+padding-left: 179px;
+}
+.promo_header__menu{
+display: flex;
+justify-content:space-evenly;
+font-family: GentiumBookBasicBold;
+font-size: 21px;
+font-weight: bold;
+}
+.promo_header nav{
+height: 100%;
+}
+.promo_header__menu{
+height: 100%;
+}
+.promo_header__menu li{
+list-style: none;
+margin-right: 30px;
+display: flex;
+align-content: center;
+justify-content: center;
+position: relative;
+flex-direction: column;
+}
+.promo_header__menu li::after{
+width: 100%;
+height: 3px;
+position: absolute;
+top: -69px;
+left: 0;
+content: "";
+transition: 0.2s all;
+}
+.promo_header__menu li:hover::after{
+background: white;
+}
+.promo_header__menu li:last-child{
+margin-right: 0;
+}
+.promo_header__menu li a{
+text-decoration: none;
+color: #ffffff;
+}
+.promo_header__social{
+width: 81px;
+height: 21px;
+}
+.promo_callout-text{
+max-width: 960px;
+opacity: 0.92;
+text-shadow: 0.5px 0.9px 2px rgba(1, 1, 1, 0.64);
+font-family: YesevaOne;
+font-size: 90px;
+text-align: center;
+color: rgba(255, 255, 255, 0.92);
+margin: 0 auto;
+margin-top: 80px;
+}
+.promo_divider{
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 34px;
+}
+.promo_buttons{
+display: flex;
+justify-content: center;
+margin-top: 34px;
+font-family: Lato;
+font-size: 18px;
+}
+.promo_buttons button{
+width: 228px;
+height: 57px;
+opacity: 60%;
+border: solid 1px #ffffff;
+background-color: #ffffff;
+color: #000000;
+}
+.promo_buttons button:first-child{
+margin-right: 30px;
+border: solid 1px #000000;
+background-color: #000000;
+color: #ffffff;
+}
+#About{
+background-image: url(../img/Bg-rightFood.png);
+background-size: cover;
+}
+.cook{
+min-height: 710px;
+display: flex;
+flex-wrap: wrap-reverse;
+align-items: center;
+justify-content: center;
+}
+.cook .cook_flex{
+max-width: 409px;
+min-height: 490px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+}
+.cook_heading{
+font-family: YesevaOne;
+font-size: 36px;
+line-height: 0.67;
+color: #cc9900;
+}
+.cook_text{
+font-family: Lato;
+font-size: 16px;
+line-height: 1.5;
+color: #4c4c4c;
+text-align: center;
+}
+.cook_img{
+padding-left: 80px;
+}
+#Ingredients{
+background-image: url(../img/Bg-fine.svg);
+background-size: cover;
+}
+.ingredients{
+display: flex;
+align-items: center;
+justify-content: flex-end;
+margin-left: 15%;
+margin-right: 15%;
+height: 758px;
+}
+.ingredients article{
+background-color: rgba(0, 0, 0, 0.67);
+max-width: 570px;
+width: 100%;
+height: 557px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.ingredients_heading{
+margin-bottom: 16px;
+font-family: YesevaOne;
+font-size: 36px;
+text-align: center;
+color: #ffffff;
+}
+.ingredients_text{
+max-width: 409px;
+font-family: Lato;
+font-size: 16px;
+line-height: 1.5;
+text-align: center;
+color: #ffffff;
+margin-top: 30px;
+margin-bottom: 76px;
+}
+.ingredients_flex{
+max-width: 409px;
+display: flex;
+flex-direction: row;
+}
+.ingredients_flex img{
+width: 100px;
+height: 100px;
+border-radius: 60px;
+border: solid 5px rgba(255, 255, 255, 0.09);
+margin-right: 40px;
+}
+.ingredients_flex:last-child{
+margin: 0;
+}
+#Menu{
+background-image: url(../img/Bg-menu-list.svg);
+background-size: cover;
+}
+.menu{
+min-height: 994px;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-evenly;
+padding-bottom: 30px;
+}
+.menu_appetisers, .menu_salads, .menu_starters, .menu_main{
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 70px;
+}
+.menu h3{
+font-family: YesevaOne;
+font-size: 36px;
+line-height: 0.67;
+text-align: center;
+color: #cc9900;
+}
+.menu img{
+margin-top: 22px;
+}
+.menu h4{
+float: left;
+font-family: YesevaOne;
+font-size: 21px;
+text-align: justify;
+color: #c89f2d;
+}
+.menu span{
+float: right;
+font-family: YesevaOne;
+font-size: 21px;
+color: #c89f2d;
+}
+.menu p{
+font-family: Lato;
+font-size: 16px;
+line-height: 1.5;
+text-align: left;
+color: #4c4c4c;
+}
+.menu hr{
+width: 430px;
+height: 1px;
+border: solid 0.1px #fbf7c0;
+background-color: #c89f2d;
+margin-top:10px;
+margin-bottom:10px;
+}
+.menu_block div{
+padding: 12px 12px 0px 12px;
+}
+.menu_special{
+width: 455px;
+height: 81px;
+border: solid 1px #c89f2d;
+margin-top: 21px;
+padding: 8px 11px 0px 12px;
+position: relative;
+}
+.menu_special__tag{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 69px;
+height: 22px;
+background-color: #c89f2d;
+font-family: Lato;
+font-size: 14px;
+line-height: 1.71;
+color: #f8fafa;
+padding: 0 !important;
+position: absolute;
+top: -21px;
+right: 0px;
+}
+#Reviews{
+background-image: url(../img/bg-reviews.png);
+background-size: cover;
+}
+.guest-reviews{
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 758px;
+}
+.guest-reviews article{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 770px;
+height: 557px;
+background-color: rgba(0, 0, 0, 0.67);
+}
+.guest-reviews h3{
+font-family: YesevaOne;
+font-size: 36px;
+text-align: center;
+color: #ffffff;
+margin-bottom: 23px;
+}
+.guest-reviews_article__text{
+max-width: 622px;
+font-family: GentiumBookBasicBold;
+font-size: 25px;
+font-weight: bold;
+line-height: 1.8;
+text-align: center;
+color: #dde0df;
+margin-top: 30px;
+}
+.guest-reviews_article_quotes {
+position: relative;
+}
+.guest-reviews_article_quotes::before{
+content: '';
+background: url(../img/quotes.png);
+background-repeat: no-repeat;
+background-size: contain;
+position: absolute;
+top: -7px;
+left: -33px;
+width: 32px;
+height: 25px;
+}
+.guest-reviews span{
+font-family: Lato;
+font-size: 18px;
+font-weight: normal;
+color: #ffffff;
+}
+#Reservations{
+background-image: url(../img/Bg-rightFood.png);
+background-size: cover;
+}
+.reservations{
+min-height: 708px;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+flex-wrap: wrap;
+}
+.reservations_images img{
+margin: 30px 30px 30px 0;
+}
+.reservations_images img:last-child{
+margin-right: 0;
+}
+.reservations_text-parts{
+max-width: 430px;
+min-height: 507px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+margin: 30px 0 30px 0;
+}
+.reservations_text-parts img{
+margin-top: 15px;
+margin-bottom: 32px;
+}
+.reservations_text-parts article{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.reservations_form{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-left: 25px;
+}
+.reservations h3{
+font-family: YesevaOne;
+font-size: 36px;
+line-height: 0.67;
+text-align: center;
+color: #cc9900;
+}
+.reservations_text-parts__article p{
+font-family: Lato;
+font-size: 16px;
+line-height: 1.5;
+text-align: center;
+color: #4c4c4c;
+}
+.reservations p:last-child{
+margin-top: 5px;
+}
+.reservations_form__column{
+display: flex;
+margin-bottom: 29px;
+}
+.reservations_form__column:last-child{
+margin-bottom: 0;
+}
+.reservations_form input{
+width: 100%;
+height: 36px;
+border: solid 1px #c8c6c6;
+background-color: #ffffff;
+font-family: OpenSans;
+font-size: 16px;
+font-style: italic;
+font-weight: normal;
+text-align: left;
+color: #7c7c7c;
+padding-left: 14px;
+margin-top: 8px;
+}
+.reservations_form input:focus{
+border: solid 1px #c89f2d;
+}
+.reservations_form__column div{
+width: -webkit-fill-available;
+margin-right: 30px;
+}
+.reservations_form label{
+font-family: OpenSans;
+font-size: 14px;
+font-weight: bold;
+text-align: left;
+color: #c9a131;
+}
+.reservation_form__button{
+width: 50%;
+height: 36px;
+border: solid 1px #c89f2d;
+background-color: #c89f2d;
+font-family: OpenSans;
+font-size: 16px;
+color: #ffffff;
+font-weight: normal;
+font-style: normal;
+}
+.footer_bg{
+background-image: url(../img/footer-bg.png);
+background-size: cover;
+}
+.footer{
+min-height: 320px;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+}
+.footer_column{
+width: 343px;
+height: 187px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+}
+.footer h4{
+font-family: YesevaOne;
+font-size: 21px;
+line-height: 1.14;
+text-align: center;
+color: #fefefe;
+}
+.footer p{
+font-family: OpenSans;
+font-size: 16px;
+font-weight: normal;
+line-height: 1.5;
+text-align: center;
+color: #ffffff;
+}
+.footer strong{
+font-family: OpenSans;
+font-size: 16px;
+font-weight: bold;
+line-height: 1.5;
+}
+.footer_column__cards, .footer_column__social{
+padding-top: 37px;
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 21" width="81" height="21">
+	<defs>
+		<image width="81" height="21" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFEAAAAVBAMAAADMaB9/AAAAAXNSR0IB2cksfwAAADBQTFRF2rM+2rM+2rM+2rM+2rM+2rM+2rM+2rM+2rM+2rM+2rM+2rM+2rM+2rM+2rM+2rM+wFseigAAABB0Uk5TALsi/1XM7mbdM0QRmYh3qu7pxUAAAAFaSURBVHicY2DAAgSVFVAFWMKMDbApZCiuQBcwhquctQFZYnNPsUBnJ5JAMkglF4g1wzh97gKEBKNJnomVFYLPaWwsc4CB9QMDAzdQjyGSSj5rK3MrEwSfy9gYSDKbKjDwGgOBA0KG3QCo0hxdJauxzQRGoEIkI4Aq80xsESqZDhobnznAwGJsbCYBVGmEpJKloVggsAXZSGPjBgbWZmMwQAovbq1VQLBoA4rKAAZGiEIgCw4uQ0RsUVR+YOBMhohfQA4TCFiApBRELYMIKyDCKIgp2FgZWTNUZTFYoQ3Cch5jZmNjjWQz4wNoKvnBKrNRVB5W1le7XiyAppLBFajQbAKaSo2HK06gq+Q6DFSZxYChcuUyNJVLQXbbb8BUuaL5A5qZ/s1mcgpICoGpgPnEZtXi+mnoPsIA7MaP4y9fvNz3+QEhlUywkIf7kunMGawqGRaCk4KFFKooAAhyZG9FAA9hAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="Header">
+		<g id="Social Icons">
+			<use id="Social" href="#img1" x="0" y="0" />
+		</g>
+	</g>
+</svg>
