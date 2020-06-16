@@ -1,207 +1,254 @@
-.container{
-max-width: 425px;
-margin: 0 auto;
+.container {
+	max-width: 425px;
+	margin: 0 auto;
 }
+
 .promo {
-min-height: 550px;
+	min-height: 550px;
 }
-.promo_header{
-min-height: 90px;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-evenly;
+
+.promo_header {
+	min-height: 90px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
 }
+
 .menu_btn {
-  position: fixed;
-  top: 23px;
-  right: 20px;
-  width: 26px;
-  height: 26px;
-  cursor: pointer;
-  z-index: 2;
+	position: fixed;
+	top: 23px;
+	right: 20px;
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	z-index: 2;
 }
+
 .menu_btn > span,
 .menu_btn > span::before,
 .menu_btn > span::after {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #ffffff;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #ffffff;
 }
+
 .menu_btn > span::before {
-  content: '';
-  top: -8px;
+	content: '';
+	top: -8px;
 }
+
 .menu_btn > span::after {
-  content: '';
-  top: 8px;
+	content: '';
+	top: 8px;
 }
+
 #menu_toggle:checked ~ .menu_btn > span {
-  transform: rotate(45deg);
+	transform: rotate(45deg);
 }
+
 #menu_toggle:checked ~ .menu_btn > span::before {
-  top: 0;
-  transform: rotate(0);
+	top: 0;
+	transform: rotate(0);
 }
+
 #menu_toggle:checked ~ .menu_btn > span::after {
-  top: 0;
-  transform: rotate(90deg);
+	top: 0;
+	transform: rotate(90deg);
 }
+
 #menu_toggle:checked ~ .menu_box {
-  visibility: visible;
-  right: 0;
+	visibility: visible;
+	right: 0;
 }
+
 .menu_btn > span,
 .menu_btn > span::before,
 .menu_btn > span::after {
-  transition-duration: .25s;
+	transition-duration: .25s;
 }
+
 .menu_box {
-display: flex;
-flex-direction: column;
-position: fixed;
-visibility: hidden;
-top: 0;
-right: -100%;
-width: 300px;
-height: 100%;
-margin: 0;
-text-align: center;
-background-color: rgba(0, 0, 0, 0.87);
-border: solid 1px #000000;
-transition-duration: .25s;
-z-index: 1;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	visibility: hidden;
+	top: 0;
+	right: -100%;
+	width: 300px;
+	height: 100%;
+	margin: 0;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.87);
+	border: solid 1px #000000;
+	transition-duration: .25s;
+	z-index: 1;
 }
-.promo{
-padding-bottom: 34px;
+
+.promo {
+	padding-bottom: 34px;
 }
-.promo_header__menu li{
-list-style: none;
-display: flex;
-align-content: center;
-justify-content: center;
-position: relative;
-flex-direction: column;
+
+.promo_header__menu li {
+	list-style: none;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	position: relative;
+	flex-direction: column;
 }
-.promo_header__menu li::after{
-display: none;
+
+.promo_header__menu li::after {
+	display: none;
 }
-.promo_header__menu li a{
-padding-top: 10px;
-padding-bottom: 10px;
+
+.promo_header__menu li a {
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
-.promo_callout-text{
-max-width: 425px;
-font-size: 50px;
-margin-top: 50px;
+
+.promo_callout-text {
+	max-width: 425px;
+	font-size: 50px;
+	margin-top: 50px;
 }
+
 .promo_buttons {
-display: flex;
-justify-content: space-evenly;
+	display: flex;
+	justify-content: space-evenly;
 }
-.promo_buttons button{
-width: 150px;
+
+.promo_buttons button {
+	width: 150px;
 }
-.promo_buttons button:first-child{
-margin-right: 0px;
+
+.promo_buttons button:first-child {
+	margin-right: 0px;
 }
-.cook_heading{
-line-height: 0.87;
-text-align: center;
-letter-spacing: normal;
+
+.cook_heading {
+	line-height: 0.87;
+	text-align: center;
+	letter-spacing: normal;
 }
-.cook_img__dish{
-width: 100%;
+
+.cook_img__dish {
+	width: 100%;
 }
-.ingredients{
-display: flex;
-align-items: center;
-justify-content: center;
+
+.ingredients {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-.ingredients article{
-max-width: 425px;
+
+.ingredients article {
+	max-width: 425px;
 }
-.ingredients_text{
-max-width: 320px;
-margin-bottom: 30px;
+
+.ingredients_text {
+	max-width: 320px;
+	margin-bottom: 30px;
 }
-.ingredients_flex{
-max-width: 320px;
+
+.ingredients_flex {
+	max-width: 320px;
 }
-.ingredients_flex img{
-width: 80px;
-height: 80px;
-margin: 0 5px 0 5px;
+
+.ingredients_flex img {
+	width: 80px;
+	height: 80px;
+	margin: 0 5px 0 5px;
 }
-.menu_block{
-max-width: 320px;
-display: flex;
-flex-direction: column;
+
+.menu_block {
+	max-width: 320px;
+	display: flex;
+	flex-direction: column;
 }
-.menu hr{
-max-width: 300px;
+
+.menu hr {
+	max-width: 300px;
 }
-.menu_block div{
-padding: 8px;
-max-width: 300px;
+
+.menu_block div {
+	padding: 8px;
+	max-width: 300px;
 }
-.menu_special{
-max-width: 300px;
+
+.menu_special {
+	max-width: 300px;
 }
-.guest-reviews article{
-width: 425x;
+
+.guest-reviews article {
+	width: 425px;
 }
-.guest-reviews_article__text{
-max-width: 320px;
-font-size: 21px;
+
+.guest-reviews_article__text {
+	max-width: 320px;
+	font-size: 21px;
 }
-.guest-reviews_article_quotes::before{
-left: 3px;
+
+.guest-reviews_article_quotes::before {
+	left: 3px;
 }
-.guest-reviews span{
-font-size: 16px;
+
+.guest-reviews span {
+	font-size: 16px;
 }
-.reservations_images{
-display: flex;
-justify-content: center;
+
+.reservations_images {
+	display: flex;
+	justify-content: center;
 }
-.reservations_images img{
-width: 40%;
+
+.reservations_images img {
+	width: 40%;
 }
-.reservations_text-parts{
-max-width: 320px;
+
+.reservations_text-parts {
+	max-width: 320px;
 }	
-.reservations_form{
-flex-direction: column;
+
+.reservations_form {
+	flex-direction: column;
 }
-.reservations h3{
-line-height: 0.87;
+
+.reservations h3 {
+	line-height: 0.87;
 }
-.reservations_form__column{
-display: flex;
-flex-direction: column;
-margin-bottom: 0;
+
+.reservations_form__column {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0;
 }
-.reservations_form__column div{
-margin-bottom: 30px;
+
+.reservations_form__column div {
+	margin-bottom: 30px;
 }
-.footer{
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
+
+.footer {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 }
-.footer_column{
-width: 300px;
-height: 210px;
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
+
+.footer_column {
+	width: 300px;
+	height: 210px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }
-.footer_column:first-child{
-margin-top: 30px;
+
+.footer_column:first-child {
+	margin-top: 30px;
 }
-.footer_column__cards, .footer_column__social{
-padding-top: 0;
+
+.footer_column__cards, 
+.footer_column__social {
+	padding-top: 0;
 }
