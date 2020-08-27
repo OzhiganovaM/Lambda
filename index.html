@@ -10,17 +10,16 @@
 		<link rel='stylesheet' media="screen and (max-width: 425px)" href="styles/mobile-style.css"/>
 	</head>
 	<body>
-		<section class="promo">
+		<section id="Home" class="promo">
 			<div class="container">
 			<header class="promo_header">
 					<a href="#" class="promo_header__logo"><img src="img/logo.png" alt="logo"></a>
 					<nav>
-						<input id="menu_toggle" type="checkbox" hidden/>
- 						 <label class="menu_btn" for="menu_toggle">
-   						 <span></span>
-  						</label>
+						<div class="menu_btn" onclick="showMenu()">
+						   <span class="closed"></span>
+						</div>
 						<ul class="promo_header__menu menu_box">
-							<li><a href="#">Home</a></li>
+							<li><a href="#Home">Home</a></li>
 							<li><a href="#About">About</a></li>
 							<li><a href="#Ingredients">Ingredients</a></li>
 							<li><a href="#Menu">Menu</a></li>
@@ -275,5 +274,46 @@
 				</div>
 			</div>
 		</footer>
-	</body>
+		<script>
+			function showMenu () {
+			let span = document.querySelector('.menu_btn > span')
+			let menu =  document.querySelector('.promo_header__menu.menu_box')
+			if (span.classList.contains('closed')) {
+				span.style.transform = 'rotate(45deg)'
+				span.classList.remove('closed')
+				span.classList.add('open')
+				menu.style.visibility = 'visible'
+				menu.style.right = '0px'
+			} else { //hide menu if already opened
+				span.classList.remove('open')
+				span.classList.add('closed')
+				span.style.transform = 'rotate(0deg)'
+				menu.style.visibility = 'hidden'
+				menu.style.right = '-100%'
+			}
+
+			//hide after clicking a menu item 
+			document.addEventListener('click', function (event) {
+            if (event.target.matches('.promo_header__menu.menu_box > li > a')) showMenu()
+            }, false);
+			//hide after clicking on X
+			document.addEventListener('click', function (event) {
+            if (event.target.matches('.menu_btn > span')) showMenu()
+            }, true);
+			//hide when clicking outside menu 
+			document.addEventListener('click', function (event) {
+            if (!event.target.matches('.promo_header__menu.menu_box')) showMenu()
+            }, true);
+			}
+			//scroll smoothly to the chosen section
+			document.querySelectorAll('.promo_header__menu.menu_box > li > a').forEach(link => {
+				const anchor = link.getAttribute("href")
+				const section = document.querySelector(anchor)
+				link.addEventListener('click', event => {
+					event.preventDefault()
+					section.scrollIntoView({block: "center", behavior: "smooth"})
+				})
+			})
+		</script>
+	</body>	
 </html>
