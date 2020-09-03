@@ -149,6 +149,15 @@ main {
 	color: #000000;
 }
 
+.promo_buttons a{
+	text-decoration: none;	
+	color: #ffffff;
+}
+
+.promo_buttons button:last-child a{
+	color: #000000;
+}
+
 .promo_buttons button:first-child {
 	margin-right: 30px;
 	border: solid 1px #000000;
@@ -541,6 +550,14 @@ main {
 	color: #ffffff;
 	font-weight: normal;
 	font-style: normal;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#loader{
+	margin: 0;
+	display: none;
 }
 
 .container_footer {
@@ -595,4 +612,66 @@ main {
 .footer_column__cards, 
 .footer_column__social {
 	padding-top: 37px;
+}
+
+#bookingModal{
+	padding: 20px;
+	display: none;
+	margin: 0 auto;
+	max-width: 650px;
+	max-height: 300px;
+	position: fixed;
+	background-color: rgba(255,255,255,0.9);
+	align-items: center;
+	justify-content: center;
+	border: solid 1px #c8c6c6;
+	text-align: center;
+	z-index: 5;
+}
+
+.modal-text{
+	font-family: OpenSans;
+    font-size: 16px;
+    font-weight: normal;
+	line-height: 1.5;
+	color: black;
+}
+
+.close-button{
+	width: 25px;
+    height: 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.close-icon,
+.close-icon:before
+{
+display: block;
+position: absolute;
+top: 10px;
+right: 5px;
+height: 2px;
+width: 15px;
+background-color: #c8c6c6;
+transform: rotate(45deg);
+}
+
+.close-icon:before{
+	content: '';
+	top: 0px;
+    right: 0px;
+	transform: rotate(90deg);
+}
+
+#overlay{
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	opacity: 0;
+	display: none;
+	position: fixed;
+    top: 0;
+    left: 0;
 }

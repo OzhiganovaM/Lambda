@@ -24,12 +24,22 @@
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
+.menu_btn > .closed {
+	transform: rotate(0deg);
+}
+
+.menu_btn > .open {
+	transform: rotate(45deg);
+}
+
 .menu_btn > .closed::before {
+	transition-duration: .25s;
 	content: '';
 	top: -8px;
 }
 
 .menu_btn > .closed::after {
+	transition-duration: .25s;
 	content: '';
 	top: 8px;
 }

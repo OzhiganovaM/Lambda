@@ -32,8 +32,8 @@
 				<h1 class="promo_callout-text">the right ingredients for the right food</h1>
 				<img src="img/divider.png" alt="decoration" class="promo_divider">
 				<div class="promo_buttons">
-					<button>BOOK A TABLE</button>
-					<button>SEE THE MENU</button>
+					<button><a href="#form1">BOOK A TABLE</a></button>
+					<button><a href="#Menu">SEE THE MENU</a></button>
 				</div>
 			</div>
 		</section>
@@ -224,12 +224,14 @@
 									<input id="date" type="text" placeholder="date*" required="required" onfocus="(this.type='date')" onblur="(this.type='text')">	
 								</div>
 								<div>
-									<label for="number">Party number</label>
-									<input id="number" type="number" placeholder="party number">
+									<label for="time">Time</label>
+									<input id="time" type="text"  min="07:00" max="22:00" required="required" step="1800" placeholder="time*" onblur="(this.type='text')" onfocus="(this.type='time')" >
 								</div>
 							</div>
 						</form>
-						<button type="submit" form="form1" value="Submit" class="reservation_form__button">Book now!</button>
+						<button type="submit" form="form1" value="Submit" class="reservation_form__button">
+							<span id="buttonText">Book now!</span>
+							<img id="loader" src="img/loader.svg" alt="loader"></button> 
 					</div>
 				</div>
 			</section>	
@@ -249,8 +251,8 @@
 					<div>
 						<img src="img/divider-white.png" alt="decoration">
 					</div>
-					<p><strong>Mon-Thu:</strong> 7:00am-8:00pm <br>
-					<strong>Fri-Sun:</strong> 7:00am-10:00pm</p>
+					<p><strong>Mon-Thu:</strong> 07:00-20:00 <br>
+					<strong>Fri-Sun:</strong> 07:00-22:00</p>
 					<div class="footer_column__cards">
 						<img src="img/card1.png" alt="card">
 						<img src="img/card2.png" alt="card">
@@ -274,46 +276,11 @@
 				</div>
 			</div>
 		</footer>
-		<script>
-			function showMenu () {
-			let span = document.querySelector('.menu_btn > span')
-			let menu =  document.querySelector('.promo_header__menu.menu_box')
-			if (span.classList.contains('closed')) {
-				span.style.transform = 'rotate(45deg)'
-				span.classList.remove('closed')
-				span.classList.add('open')
-				menu.style.visibility = 'visible'
-				menu.style.right = '0px'
-			} else { //hide menu if already opened
-				span.classList.remove('open')
-				span.classList.add('closed')
-				span.style.transform = 'rotate(0deg)'
-				menu.style.visibility = 'hidden'
-				menu.style.right = '-100%'
-			}
-
-			//hide after clicking a menu item 
-			document.addEventListener('click', function (event) {
-            if (event.target.matches('.promo_header__menu.menu_box > li > a')) showMenu()
-            }, false);
-			//hide after clicking on X
-			document.addEventListener('click', function (event) {
-            if (event.target.matches('.menu_btn > span')) showMenu()
-            }, true);
-			//hide when clicking outside menu 
-			document.addEventListener('click', function (event) {
-            if (!event.target.matches('.promo_header__menu.menu_box')) showMenu()
-            }, true);
-			}
-			//scroll smoothly to the chosen section
-			document.querySelectorAll('.promo_header__menu.menu_box > li > a').forEach(link => {
-				const anchor = link.getAttribute("href")
-				const section = document.querySelector(anchor)
-				link.addEventListener('click', event => {
-					event.preventDefault()
-					section.scrollIntoView({block: "center", behavior: "smooth"})
-				})
-			})
-		</script>
+		<div id="overlay"></div>
+		<div id="bookingModal">
+			<div onclick="hideModal()" class="close-button"><span class="close-icon"></span></div>
+			<p class="modal-text"></p>
+		</div>
+		<script src="script.js"></script>
 	</body>	
 </html>
